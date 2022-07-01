@@ -28,7 +28,7 @@ public class CarSalesMapper extends Mapper <LongWritable, Text, Text, IntWritabl
         // Memisahkan string menjadi array of string dengan tanda koma sebagai pemisah
         String[] SingleCarData = valueString.split(",");
 
-        // Mengambil data negara, data negara terdapat pada kolom ke 1 atau index 0
+        // Mengambil data mobil, data mobil terdapat pada kolom ke 1 atau index 0
         context.write(new Text(SingleCarData[0]), one);
     }
 }
